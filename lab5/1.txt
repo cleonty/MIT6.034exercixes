@@ -1,0 +1,204 @@
+----------------------------------------
+Training on OR data
+iter 1000: mean-abs-performance = 0.000191
+iter 1708: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 5.114333
+Weight 'w2A': 4.574591
+Weight 'wA': 2.976218
+Weight 'wAC': 8.187406
+Weight 'wBC': -4.711184
+Weight 'wC': 1.788690
+Weight 'w1B': -2.454555
+Weight 'w2B': -3.121323
+Weight 'wB': -1.690311
+Testing on OR test-data
+test((0.1, 0.1, 0)) returned: 0.0123427207611 => 0.0 [correct]
+test((0.1, 0.9, 1)) returned: 0.984067726871 => 1.0 [correct]
+test((0.9, 0.1, 1)) returned: 0.983096498957 => 1.0 [correct]
+test((0.9, 0.9, 1)) returned: 0.997993711713 => 1.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on AND data
+iter 1000: mean-abs-performance = 0.000250
+iter 2000: mean-abs-performance = 0.000104
+iter 2073: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 4.656470
+Weight 'w2A': 4.094515
+Weight 'wA': 5.866611
+Weight 'wAC': 9.205817
+Weight 'wBC': -4.957223
+Weight 'wC': 2.627892
+Weight 'w1B': -1.906191
+Weight 'w2B': -2.666630
+Weight 'wB': -2.837487
+Testing on AND test-data
+test((0.1, 0.1, 0)) returned: 0.000821850331437 => 0.0 [correct]
+test((0.1, 0.9, 0)) returned: 0.0178458464157 => 0.0 [correct]
+test((0.9, 0.1, 0)) returned: 0.0165937813294 => 0.0 [correct]
+test((0.9, 0.9, 1)) returned: 0.987983780431 => 1.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on EQUAL data
+iter 1000: mean-abs-performance = 0.001071
+iter 2000: mean-abs-performance = 0.000414
+iter 3000: mean-abs-performance = 0.000252
+iter 4000: mean-abs-performance = 0.000181
+iter 5000: mean-abs-performance = 0.000140
+iter 6000: mean-abs-performance = 0.000114
+iter 6782: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 5.787828
+Weight 'w2A': -5.973729
+Weight 'wA': 3.118677
+Weight 'wAC': -9.999514
+Weight 'wBC': 9.569888
+Weight 'wC': 4.518235
+Weight 'w1B': 6.424509
+Weight 'w2B': -6.273592
+Weight 'wB': -3.165547
+Testing on EQUAL test-data
+test((0.1, 0.1, 1)) returned: 0.98598989612 => 1.0 [correct]
+test((0.1, 0.9, 0)) returned: 0.0388539685898 => 0.0 [correct]
+test((0.9, 0.1, 0)) returned: 0.0424702150276 => 0.0 [correct]
+test((0.9, 0.9, 1)) returned: 0.98727221477 => 1.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on NOT_EQUAL data
+iter 1000: mean-abs-performance = 0.001071
+iter 2000: mean-abs-performance = 0.000414
+iter 3000: mean-abs-performance = 0.000252
+iter 4000: mean-abs-performance = 0.000181
+iter 5000: mean-abs-performance = 0.000140
+iter 6000: mean-abs-performance = 0.000114
+iter 6782: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 5.787828
+Weight 'w2A': -5.973729
+Weight 'wA': 3.118677
+Weight 'wAC': 9.999514
+Weight 'wBC': -9.569888
+Weight 'wC': -4.518235
+Weight 'w1B': 6.424509
+Weight 'w2B': -6.273592
+Weight 'wB': -3.165547
+Testing on NOT_EQUAL test-data
+test((0.1, 0.1, 0)) returned: 0.0140101038798 => 0.0 [correct]
+test((0.1, 0.9, 1)) returned: 0.96114603141 => 1.0 [correct]
+test((0.9, 0.1, 1)) returned: 0.957529784972 => 1.0 [correct]
+test((0.9, 0.9, 0)) returned: 0.0127277852296 => 0.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on horizontal-bands data
+iter 1000: mean-abs-performance = 0.000208
+iter 1885: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 0.203768
+Weight 'w2A': -6.065563
+Weight 'wA': -2.867939
+Weight 'wAC': -10.207411
+Weight 'wBC': 10.396886
+Weight 'wC': 5.004769
+Weight 'w1B': 0.075070
+Weight 'w2B': -4.234177
+Weight 'wB': -10.270842
+Testing on horizontal-bands test-data
+test((1, 1.5, 1)) returned: 0.994401005113 => 1.0 [correct]
+test((2, 1.5, 1)) returned: 0.994444424466 => 1.0 [correct]
+test((3, 1.5, 1)) returned: 0.994475550946 => 1.0 [correct]
+test((0, 1.5, 1)) returned: 0.994345905609 => 1.0 [correct]
+test((4, 0, 0)) returned: 0.0103008911592 => 0.0 [correct]
+test((4, 4, 0)) returned: 0.00678037418436 => 0.0 [correct]
+test((-1, 0, 0)) returned: 0.0155049995358 => 0.0 [correct]
+test((-1, 4, 0)) returned: 0.00674290384282 => 0.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on vertical-bands data
+iter 1000: mean-abs-performance = 0.000202
+iter 1854: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 4.068755
+Weight 'w2A': -0.071184
+Weight 'wA': 10.045281
+Weight 'wAC': -10.816512
+Weight 'wBC': 9.843598
+Weight 'wC': 4.502134
+Weight 'w1B': 6.208647
+Weight 'w2B': -0.187324
+Weight 'wB': 3.129002
+Testing on vertical-bands test-data
+test((0, 1, 0)) returned: 0.0153995972903 => 0.0 [correct]
+test((0, 2, 0)) returned: 0.0145569306044 => 0.0 [correct]
+test((0, 1.5, 0)) returned: 0.0149539788382 => 0.0 [correct]
+test((1.5, 2, 1)) returned: 0.994135664837 => 1.0 [correct]
+test((1.5, 5, 1)) returned: 0.994204535806 => 1.0 [correct]
+test((1.5, 1, 1)) returned: 0.994089082346 => 1.0 [correct]
+test((3, 1, 0)) returned: 0.01359672558 => 0.0 [correct]
+test((3, 1.5, 0)) returned: 0.0141193029022 => 0.0 [correct]
+test((3, 2, 0)) returned: 0.014677080006 => 0.0 [correct]
+test((1, 1.5, 1)) returned: 0.991438326539 => 1.0 [correct]
+test((1, -1.5, 1)) returned: 0.9931780731 => 1.0 [correct]
+test((2, 1.5, 1)) returned: 0.983165188511 => 1.0 [correct]
+test((2, -1.5, 1)) returned: 0.978284066223 => 1.0 [correct]
+test((4, 0, 0)) returned: 0.00426184499673 => 0.0 [correct]
+test((4, 4, 0)) returned: 0.00429159868957 => 0.0 [correct]
+test((-1, 0, 0)) returned: 0.0109730905595 => 0.0 [correct]
+test((-1, 4, 0)) returned: 0.0109681541258 => 0.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on diagonal-band data
+iter 1000: mean-abs-performance = 0.000151
+iter 1471: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 3.585499
+Weight 'w2A': -3.852796
+Weight 'wA': 3.488457
+Weight 'wAC': -9.041630
+Weight 'wBC': 8.784513
+Weight 'wC': 4.397074
+Weight 'w1B': 4.009462
+Weight 'w2B': -3.724856
+Weight 'wB': -3.425082
+Testing on diagonal-band test-data
+test((-1, -1, 1)) returned: 0.975305478946 => 1.0 [correct]
+test((5, 5, 1)) returned: 0.985895798764 => 1.0 [correct]
+test((-2, -2, 1)) returned: 0.969578076949 => 1.0 [correct]
+test((6, 6, 1)) returned: 0.986355709012 => 1.0 [correct]
+test((3.5, 3.5, 1)) returned: 0.984872746624 => 1.0 [correct]
+test((1.5, 1.5, 1)) returned: 0.982424150562 => 1.0 [correct]
+test((4, 0, 0)) returned: 0.00943344131174 => 0.0 [correct]
+test((0, 4, 0)) returned: 0.0121646388658 => 0.0 [correct]
+Accuracy: 1.000000
+----------------------------------------
+Training on inverse-diagonal-band data
+iter 1000: mean-abs-performance = 0.000151
+iter 1471: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': 3.585499
+Weight 'w2A': -3.852796
+Weight 'wA': 3.488457
+Weight 'wAC': 9.041630
+Weight 'wBC': -8.784513
+Weight 'wC': -4.397074
+Weight 'w1B': 4.009462
+Weight 'w2B': -3.724856
+Weight 'wB': -3.425082
+Testing on inverse-diagonal-band test-data
+test((-1, -1, 0)) returned: 0.0246945210536 => 0.0 [correct]
+test((5, 5, 0)) returned: 0.0141042012359 => 0.0 [correct]
+test((-2, -2, 0)) returned: 0.0304219230514 => 0.0 [correct]
+test((6, 6, 0)) returned: 0.0136442909881 => 0.0 [correct]
+test((3.5, 3.5, 0)) returned: 0.0151272533761 => 0.0 [correct]
+test((1.5, 1.5, 0)) returned: 0.017575849438 => 0.0 [correct]
+test((4, 0, 1)) returned: 0.990566558688 => 1.0 [correct]
+test((0, 4, 1)) returned: 0.987835361134 => 1.0 [correct]
+Accuracy: 1.000000

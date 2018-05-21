@@ -1,0 +1,690 @@
+<?xml version='1.0' encoding='utf-8'?>
+<scheme description="" title="Breast" version="2.0">
+	<nodes>
+		<node id="0" name="Data Table" position="(329.0, 22.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Data.OWDataTable.OWDataTable" title="Data Table" version="" />
+		<node id="1" name="Majority" position="(338.0, 119.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWMajority.OWMajority" title="Majority" version="" />
+		<node id="2" name="Classification Tree" position="(342.0, 217.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWClassificationTree.OWClassificationTree" title="Classification Tree" version="" />
+		<node id="3" name="k Nearest Neighbours" position="(346.0, 311.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWKNN.OWKNN" title="k Nearest Neighbours" version="" />
+		<node id="4" name="SVM" position="(346.0, 425.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWSVM.OWSVM" title="SVM linear" version="" />
+		<node id="5" name="SVM" position="(350.0, 525.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWSVM.OWSVM" title="SVM p" version="" />
+		<node id="6" name="SVM" position="(351.0, 625.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWSVM.OWSVM" title="SVM rbf" version="" />
+		<node id="7" name="SVM" position="(351.0, 724.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWSVM.OWSVM" title="SVM r" version="" />
+		<node id="8" name="SVM" position="(353.0, 818.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWSVM.OWSVM" title="SVM sigmoid" version="" />
+		<node id="9" name="Naive Bayes" position="(348.0, 918.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Classify.OWNaiveBayes.OWNaiveBayes" title="Naive Bayes" version="" />
+		<node id="10" name="Test Learners" position="(945.0, 386.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Evaluate.OWTestLearners.OWTestLearners" title="Test Learners" version="" />
+		<node id="11" name="ROC Analysis" position="(1366.0, 375.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Evaluate.OWROC.OWROC" title="ROC Analysis" version="" />
+		<node id="12" name="Confusion Matrix" position="(1092.0, 566.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Evaluate.OWConfusionMatrix.OWConfusionMatrix" title="Confusion Matrix" version="" />
+		<node id="13" name="Predictions" position="(969.0, 772.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Evaluate.OWPredictions.OWPredictions" title="Predictions" version="" />
+		<node id="14" name="Data Sampler" position="(185.0, 440.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Data.OWDataSampler.OWDataSampler" title="Data Sampler" version="" />
+		<node id="15" name="File" position="(49.0, 445.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Data.OWFile.OWFile" title="File" version="" />
+		<node id="16" name="Data Table" position="(1198.0, 734.0)" project_name="Orange" qualified_name="Orange.OrangeWidgets.Data.OWDataTable.OWDataTable" title="Data Table (1)" version="" />
+	</nodes>
+	<links>
+		<link enabled="true" id="0" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="1" />
+		<link enabled="true" id="1" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="2" />
+		<link enabled="true" id="2" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="3" />
+		<link enabled="true" id="3" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="4" />
+		<link enabled="true" id="4" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="5" />
+		<link enabled="true" id="5" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="6" />
+		<link enabled="true" id="6" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="7" />
+		<link enabled="true" id="7" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="8" />
+		<link enabled="true" id="8" sink_channel="Learner" sink_node_id="10" source_channel="Learner" source_node_id="9" />
+		<link enabled="true" id="9" sink_channel="Evaluation Results" sink_node_id="11" source_channel="Evaluation Results" source_node_id="10" />
+		<link enabled="true" id="10" sink_channel="Evaluation Results" sink_node_id="12" source_channel="Evaluation Results" source_node_id="10" />
+		<link enabled="true" id="11" sink_channel="Predictors" sink_node_id="13" source_channel="Classifier" source_node_id="6" />
+		<link enabled="true" id="12" sink_channel="Predictors" sink_node_id="13" source_channel="Classifier" source_node_id="7" />
+		<link enabled="true" id="13" sink_channel="Predictors" sink_node_id="13" source_channel="Classifier" source_node_id="8" />
+		<link enabled="true" id="14" sink_channel="Predictors" sink_node_id="13" source_channel="Naive Bayesian Classifier" source_node_id="9" />
+		<link enabled="true" id="15" sink_channel="Predictors" sink_node_id="13" source_channel="Classifier" source_node_id="5" />
+		<link enabled="true" id="16" sink_channel="Predictors" sink_node_id="13" source_channel="Classifier" source_node_id="4" />
+		<link enabled="true" id="17" sink_channel="Predictors" sink_node_id="13" source_channel="kNN Classifier" source_node_id="3" />
+		<link enabled="true" id="18" sink_channel="Predictors" sink_node_id="13" source_channel="Classification Tree" source_node_id="2" />
+		<link enabled="true" id="19" sink_channel="Predictors" sink_node_id="13" source_channel="Classifier" source_node_id="1" />
+		<link enabled="true" id="20" sink_channel="Data" sink_node_id="9" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="21" sink_channel="Data" sink_node_id="8" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="22" sink_channel="Data" sink_node_id="7" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="23" sink_channel="Data" sink_node_id="6" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="24" sink_channel="Data" sink_node_id="5" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="25" sink_channel="Data" sink_node_id="4" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="26" sink_channel="Data" sink_node_id="3" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="27" sink_channel="Data" sink_node_id="2" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="28" sink_channel="Data" sink_node_id="1" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="29" sink_channel="Data" sink_node_id="14" source_channel="Data" source_node_id="15" />
+		<link enabled="true" id="30" sink_channel="Data" sink_node_id="13" source_channel="Remaining Data" source_node_id="14" />
+		<link enabled="true" id="31" sink_channel="Separate Test Data" sink_node_id="10" source_channel="Remaining Data" source_node_id="14" />
+		<link enabled="true" id="32" sink_channel="Data" sink_node_id="10" source_channel="Data Sample" source_node_id="14" />
+		<link enabled="true" id="33" sink_channel="Data" sink_node_id="16" source_channel="Predictions" source_node_id="13" />
+	</links>
+	<annotations />
+	<thumbnail />
+	<node_properties>
+		<properties format="literal" node_id="0">{'autoCommit': False, 'showMeta': 1, 'selectRows': True, 'distColorRgb': (220, 220, 220, 255), 'showAttributeLabels': 1, 'showDistributions': 1, 'widgetShown': 0, '__settingsDataVersion': None, 'selectedSchemaIndex': 0, 'colorByClass': True, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x02\xdf\x00\x00\x00\xc8\x00\x00\x06\xbc\x00\x00\x03\x03\x00\x00\x02\xe7\x00\x00\x00\xe7\x00\x00\x06\xb4\x00\x00\x02\xfb\x00\x00\x00\x00\x00\x00'}</properties>
+		<properties format="literal" node_id="1">{'widgetShown': None, 'savedWidgetGeometry': None, '__settingsDataVersion': None, 'name': 'Majority'}</properties>
+		<properties format="literal" node_id="2">{'bin': 0, 'subset': 0, 'preNodeMajP': 95, 'name': 'Classification Tree', 'postMaj': 1, 'preNodeInst': 0, 'postMPruning': 1, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x03\x0f\x00\x00\x00\xd0\x00\x00\x04g\x00\x00\x03\x1f\x00\x00\x03\x12\x00\x00\x00\xea\x00\x00\x04d\x00\x00\x03\x1c\x00\x00\x00\x00\x00\x00', 'limitDepth': False, 'relK': 5, 'postM': 2.0, 'estim': 0, 'maxDepth': 100, 'relM': 100, 'widgetShown': 0, 'preLeafInstP': 2, 'preNodeInstP': 5, 'preLeafInst': 1, '__settingsDataVersion': None, 'preNodeMaj': 0}</properties>
+		<properties format="literal" node_id="3">{'normalize': 1, 'widgetShown': 0, 'name': 'kNN', 'ranks': 0, 'k': 10, 'ignoreUnknowns': 0, 'metrics': 0, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x03R\x00\x00\x01P\x00\x00\x04-\x00\x00\x02\xa8\x00\x00\x03U\x00\x00\x01j\x00\x00\x04*\x00\x00\x02\xa5\x00\x00\x00\x00\x00\x00', '__settingsDataVersion': None}</properties>
+		<properties format="literal" node_id="4">{'kernel_type': 0, 'C': 1.0, 'degree': 3, 'probability': 1, 'eps': 0.001, 'widgetShown': 0, 'p': 0.1, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x03/\x00\x00\x00\xf0\x00\x00\x04G\x00\x00\x02\xff\x00\x00\x032\x00\x00\x01\n\x00\x00\x04D\x00\x00\x02\xfc\x00\x00\x00\x00\x00\x00', 'normalization': 1, 'useNu': 0, '__settingsDataVersion': None, 'coef0': 0.0, 'nu': 0.5, 'gamma': 0.0, 'name': u'SVM linear'}</properties>
+		<properties format="literal" node_id="5">{'kernel_type': 1, 'C': 128.0, 'degree': 3.0, 'probability': 1, 'eps': 0.001, 'widgetShown': 1, 'p': 0.1, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x034\x00\x00\x00\xf5\x00\x00\x04L\x00\x00\x03\x04\x00\x00\x037\x00\x00\x01\x0f\x00\x00\x04I\x00\x00\x03\x01\x00\x00\x00\x00\x00\x00', 'normalization': 1, 'useNu': 0, '__settingsDataVersion': None, 'coef0': 0.0, 'nu': 0.5, 'gamma': 0.0, 'name': u'SVM p'}</properties>
+		<properties format="literal" node_id="6">{'kernel_type': 2, 'C': 1.0, 'degree': 3, 'probability': 1, 'eps': 0.001, 'widgetShown': 0, 'p': 0.1, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x034\x00\x00\x00\xf5\x00\x00\x04L\x00\x00\x03\x04\x00\x00\x037\x00\x00\x01\x0f\x00\x00\x04I\x00\x00\x03\x01\x00\x00\x00\x00\x00\x00', 'normalization': 1, 'useNu': 0, '__settingsDataVersion': None, 'coef0': 0.0, 'nu': 0.5, 'gamma': 0.0, 'name': u'SVM rbf'}</properties>
+		<properties format="literal" node_id="7">{'kernel_type': 2, 'C': 1.0, 'degree': 3, 'probability': 1, 'eps': 0.001, 'widgetShown': 0, 'p': 0.1, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x034\x00\x00\x00\xf5\x00\x00\x04L\x00\x00\x03\x04\x00\x00\x037\x00\x00\x01\x0f\x00\x00\x04I\x00\x00\x03\x01\x00\x00\x00\x00\x00\x00', 'normalization': 1, 'useNu': 0, '__settingsDataVersion': None, 'coef0': 0.0, 'nu': 0.5, 'gamma': 0.0, 'name': u'SVM r'}</properties>
+		<properties format="literal" node_id="8">{'kernel_type': 3, 'C': 1.0, 'degree': 3, 'probability': 1, 'eps': 0.001, 'widgetShown': 0, 'p': 0.1, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x034\x00\x00\x00\xf5\x00\x00\x04L\x00\x00\x03\x04\x00\x00\x037\x00\x00\x01\x0f\x00\x00\x04I\x00\x00\x03\x01\x00\x00\x00\x00\x00\x00', 'normalization': 1, 'useNu': 0, '__settingsDataVersion': None, 'coef0': 0.0, 'nu': 0.5, 'gamma': 0.0, 'name': u'SVM sigmoid'}</properties>
+		<properties format="literal" node_id="9">{'adjustThreshold': 0, 'name': 'Naive Bayes', 'probEstimation': 0, 'm_estimator.m': 2.0, 'condProbEstimation': 0, 'savedWidgetGeometry': None, 'widgetShown': None, 'windowProportion': 0.5, '__settingsDataVersion': None}</properties>
+		<properties format="pickle" node_id="10">(dp1
+S'selectedCScores'
+p2
+(lp3
+I0
+aI1
+aI2
+aI3
+aI8
+asS'selectedRScores'
+p4
+(lp5
+I1
+aI4
+aI6
+asS'pLearning'
+p6
+I70
+sS'localContexts'
+p7
+(lp8
+(iOWContexts
+Context
+p9
+(dp10
+S'metas'
+p11
+(dp12
+sS'values'
+p13
+(dp14
+S'targetClass'
+p15
+(I0
+I-2
+tp16
+ssS'time'
+p17
+F1498105470.138
+sS'attributes'
+p18
+(dp19
+S'recurrence'
+p20
+cOrange.orange
+__pickleLoaderNamedConstants
+p21
+(S'Variable_Type'
+(I1
+ttRp22
+sS'node-caps'
+p23
+g21
+(S'Variable_Type'
+(I1
+ttRp24
+sS'inv-nodes'
+p25
+g21
+(S'Variable_Type'
+(I1
+ttRp26
+sS'age'
+p27
+g21
+(S'Variable_Type'
+(I1
+ttRp28
+sS'deg-malig'
+p29
+g21
+(S'Variable_Type'
+(I1
+ttRp30
+sS'irradiat'
+p31
+g21
+(S'Variable_Type'
+(I1
+ttRp32
+sS'breast'
+p33
+g21
+(S'Variable_Type'
+(I1
+ttRp34
+sS'menopause'
+p35
+g21
+(S'Variable_Type'
+(I1
+ttRp36
+sS'tumor-size'
+p37
+g21
+(S'Variable_Type'
+(I1
+ttRp38
+sS'breast-quad'
+p39
+g21
+(S'Variable_Type'
+(I1
+ttRp40
+ssS'noCopy'
+p41
+(lp42
+S'orderedDomain'
+p43
+asbasS'pRepeat'
+p44
+I10
+sS'precision'
+p45
+I4
+sS'widgetShown'
+p46
+I0
+sS'savedWidgetGeometry'
+p47
+S'\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x02d\x00\x00\x00\xd4\x00\x00\x05\x1b\x00\x00\x03%\x00\x00\x02l\x00\x00\x00\xf3\x00\x00\x05\x13\x00\x00\x03\x1d\x00\x00\x00\x00\x00\x00'
+p48
+sS'resampling'
+p49
+I0
+sS'__settingsDataVersion'
+p50
+NsS'localContextsVersion'
+p51
+(I100
+I0
+tp52
+sS'nFolds'
+p53
+I10
+sS'applyOnAnyChange'
+p54
+I01
+s.</properties>
+		<properties format="pickle" node_id="11">(dp1
+S'widgetShown'
+p2
+I0
+sS'localContextsVersion'
+p3
+(I100
+I0
+tp4
+sS'localContexts'
+p5
+(lp6
+(iOWContexts
+Context
+p7
+(dp8
+S'selectedClassifiers'
+p9
+(lp10
+I0
+aI1
+aI2
+aI3
+aI4
+aI5
+aI6
+aI7
+aI8
+asS'classValues'
+p11
+(lp12
+S'no-recurrence-events'
+p13
+aS'recurrence-events'
+p14
+asS'classifierNames'
+p15
+(lp16
+S'Majority'
+p17
+aS'Naive Bayes'
+p18
+aVSVM linear
+p19
+aS'kNN'
+p20
+aVSVM p
+p21
+aVSVM rbf
+p22
+aVSVM sigmoid
+p23
+aVSVM r
+p24
+aS'Classification Tree'
+p25
+asS'targetClass'
+p26
+I0
+sS'time'
+p27
+F1498105470.8039999
+sba(iOWContexts
+Context
+p28
+(dp29
+g9
+(lp30
+I0
+aI1
+aI2
+aI3
+aI4
+aI5
+aI6
+aI7
+aI8
+asg11
+(lp31
+S'no-recurrence-events'
+p32
+aS'recurrence-events'
+p33
+asg15
+(lp34
+S'Majority'
+p35
+aS'Naive Bayes'
+p36
+aVSVM p
+p37
+aVSVM linear
+p38
+aS'kNN'
+p39
+aVSVM rbf
+p40
+aVSVM sigmoid
+p41
+aVSVM r
+p42
+aS'Classification Tree'
+p43
+asg26
+I0
+sg27
+F1497934375.6860001
+sba(iOWContexts
+Context
+p44
+(dp45
+g9
+(lp46
+I1
+aI4
+aI5
+aI6
+aI7
+aI8
+asg11
+(lp47
+S'no-recurrence-events'
+p48
+aS'recurrence-events'
+p49
+asg15
+(lp50
+S'Majority'
+p51
+aS'Classification Tree'
+p52
+aS'kNN'
+p53
+aVSVM linear
+p54
+aVSVM p
+p55
+aS'SVM'
+p56
+ag56
+ag56
+aS'Naive Bayes'
+p57
+asg26
+I0
+sg27
+F1497929429.425
+sbasS'ShowConvexHull'
+p58
+I00
+sS'savedWidgetGeometry'
+p59
+S'\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x02)\x00\x00\x00\x87\x00\x00\x05X\x00\x00\x03\x05\x00\x00\x021\x00\x00\x00\xa6\x00\x00\x05P\x00\x00\x02\xfd\x00\x00\x00\x00\x00\x00'
+p60
+sS'EnablePerformance'
+p61
+I1
+sS'ShowConvexCurves'
+p62
+I00
+sS'CurveWidth'
+p63
+I3
+sS'DefaultThresholdPoint'
+p64
+I1
+sS'AveragingMethodIndex'
+p65
+I0
+sS'__settingsDataVersion'
+p66
+NsS'HullColor'
+p67
+S'#ffff00'
+p68
+sS'PointWidth'
+p69
+I7
+sS'ConvexCurveWidth'
+p70
+I1
+sS'ShowDiagonal'
+p71
+I1
+sS'ConvexHullCurveWidth'
+p72
+I3
+s.</properties>
+		<properties format="literal" node_id="12">{'widgetShown': 0, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x02Z\x00\x00\x00\xf8\x00\x00\x05%\x00\x00\x03\x00\x00\x00\x02b\x00\x00\x01\x17\x00\x00\x05\x1d\x00\x00\x02\xf8\x00\x00\x00\x00\x00\x00', '__settingsDataVersion': None}</properties>
+		<properties format="pickle" node_id="13">(dp1
+S'showProb'
+p2
+I1
+sS'precision'
+p3
+I2
+sS'sendOnChange'
+p4
+I1
+sS'widgetShown'
+p5
+I0
+sS'savedWidgetGeometry'
+p6
+S'\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x00\xdf\x00\x00\x00L\x00\x00\x07_\x00\x00\x03\x8c\x00\x00\x00\xe7\x00\x00\x00k\x00\x00\x07W\x00\x00\x03\x84\x00\x00\x00\x00\x00\x00'
+p7
+sS'ShowAttributeMethod'
+p8
+I1
+sS'showClass'
+p9
+I01
+sS'__settingsDataVersion'
+p10
+NsS'localContextsVersion'
+p11
+(I100
+I0
+tp12
+sS'localContexts'
+p13
+(lp14
+(iOWContexts
+Context
+p15
+(dp16
+S'classes'
+p17
+(lp18
+S'no-recurrence-events'
+p19
+aS'recurrence-events'
+p20
+asS'values'
+p21
+(dp22
+S'selectedClasses'
+p23
+(lp24
+I0
+aI1
+assS'time'
+p25
+F1498105432.204
+sbas.</properties>
+		<properties format="pickle" node_id="14">(dp1
+S'autocommit'
+p2
+I00
+sS'GroupText'
+p3
+S'0.1,0.25,0.5'
+p4
+sS'Repeat'
+p5
+I0
+sS'RandomSeed'
+p6
+I1
+sS'CVFolds'
+p7
+I10
+sS'pGroups'
+p8
+(lp9
+F0.10000000000000001
+aF0.25
+aF0.5
+asS'Folds'
+p10
+I10
+sS'SelectType'
+p11
+I1
+sS'__settingsDataVersion'
+p12
+NsS'nCases'
+p13
+I25
+sS'widgetShown'
+p14
+I0
+sS'UseSpecificSeed'
+p15
+I0
+sS'savedWidgetGeometry'
+p16
+S'\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x03&gt;\x00\x00\x00\xae\x00\x00\x04A\x00\x00\x03J\x00\x00\x03F\x00\x00\x00\xcd\x00\x00\x049\x00\x00\x03B\x00\x00\x00\x00\x00\x00'
+p17
+sS'GroupSeed'
+p18
+I1
+sS'Stratified'
+p19
+I1
+sS'outFold'
+p20
+I1
+sS'nGroups'
+p21
+I3
+sS'useCases'
+p22
+I0
+sS'localContextsVersion'
+p23
+(I100
+I0
+tp24
+sS'localContexts'
+p25
+(lp26
+(iOWContexts
+Context
+p27
+(dp28
+S'metas'
+p29
+(dp30
+sS'values'
+p31
+(dp32
+g13
+(I25
+I-2
+tp33
+sS'selPercentage'
+p34
+(I30
+I-2
+tp35
+ssS'time'
+p36
+F1498105312.201
+sS'attributes'
+p37
+(dp38
+S'recurrence'
+p39
+cOrange.orange
+__pickleLoaderNamedConstants
+p40
+(S'Variable_Type'
+(I1
+ttRp41
+sS'node-caps'
+p42
+g40
+(S'Variable_Type'
+(I1
+ttRp43
+sS'inv-nodes'
+p44
+g40
+(S'Variable_Type'
+(I1
+ttRp45
+sS'age'
+p46
+g40
+(S'Variable_Type'
+(I1
+ttRp47
+sS'deg-malig'
+p48
+g40
+(S'Variable_Type'
+(I1
+ttRp49
+sS'irradiat'
+p50
+g40
+(S'Variable_Type'
+(I1
+ttRp51
+sS'breast'
+p52
+g40
+(S'Variable_Type'
+(I1
+ttRp53
+sS'menopause'
+p54
+g40
+(S'Variable_Type'
+(I1
+ttRp55
+sS'tumor-size'
+p56
+g40
+(S'Variable_Type'
+(I1
+ttRp57
+sS'breast-quad'
+p58
+g40
+(S'Variable_Type'
+(I1
+ttRp59
+ssS'noCopy'
+p60
+(lp61
+S'orderedDomain'
+p62
+asbasg34
+I30
+s.</properties>
+		<properties format="pickle" node_id="15">(dp1
+S'selected_file'
+p2
+VC:/Users/lchudinov/Documents/NetBeansProjects/MIT/6.034/lab5/breast-cancer.tab
+p3
+sS'show_advanced'
+p4
+I00
+sS'__settingsDataVersion'
+p5
+NsS'widgetShown'
+p6
+I0
+sS'savedWidgetGeometry'
+p7
+S'\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x02\xfb\x00\x00\x01}\x00\x00\x04\x84\x00\x00\x03O\x00\x00\x03\x03\x00\x00\x01\x9c\x00\x00\x04|\x00\x00\x03G\x00\x00\x00\x00\x00\x00'
+p8
+sS'recent_files'
+p9
+(lp10
+g3
+asS'create_new_on'
+p11
+I2
+sS'localContextsVersion'
+p12
+(I100
+I0
+tp13
+sS'localContexts'
+p14
+(lp15
+(iOWContexts
+Context
+p16
+(dp17
+S'loader'
+p18
+ccopy_reg
+_reconstructor
+p19
+(cOrange.OrangeWidgets.Data.OWFile
+LoadAction
+p20
+c__builtin__
+tuple
+p21
+(S'Tab-delimited files'
+p22
+g19
+(cOrange.OrangeWidgets.Data.OWFile
+OrangeTab
+p23
+g21
+(S''
+S''
+ttRp24
+ttRp25
+sS'symbolDC'
+p26
+S''
+sS'symbolDK'
+p27
+S''
+sS'filename'
+p28
+g3
+sS'time'
+p29
+F1498105301.691
+sbas.</properties>
+		<properties format="literal" node_id="16">{'autoCommit': False, 'showMeta': 1, 'selectRows': True, 'distColorRgb': (220, 220, 220, 255), 'showAttributeLabels': 1, '__settingsDataVersion': None, 'showDistributions': 1, 'widgetShown': 0, 'savedWidgetGeometry': '\x01\xd9\xd0\xcb\x00\x01\x00\x00\x00\x00\x01\x92\x00\x00\x00\xb2\x00\x00\x05o\x00\x00\x02\xed\x00\x00\x01\x9a\x00\x00\x00\xd1\x00\x00\x05g\x00\x00\x02\xe5\x00\x00\x00\x00\x00\x00', 'selectedSchemaIndex': 0, 'colorByClass': True}</properties>
+	</node_properties>
+</scheme>

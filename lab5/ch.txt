@@ -1,0 +1,75 @@
+----------------------------------------
+Training on moat data
+iter 1000: mean-abs-performance = 0.026598
+iter 2000: mean-abs-performance = 0.022039
+iter 3000: mean-abs-performance = 0.020904
+iter 4000: mean-abs-performance = 0.020752
+iter 5000: mean-abs-performance = 0.020692
+iter 6000: mean-abs-performance = 0.020660
+iter 7000: mean-abs-performance = 0.020641
+iter 8000: mean-abs-performance = 0.020628
+iter 9000: mean-abs-performance = 0.020618
+iter 10000: mean-abs-performance = 0.020611
+Trained weights:
+Weight 'w1A': -9.616568
+Weight 'w2A': 7.761319
+Weight 'wA': 1.830880
+Weight 'wAC': -5.766395
+Weight 'wBC': -6.097302
+Weight 'wC': 0.809592
+Weight 'w1B': 2.505000
+Weight 'w2B': -7.029073
+Weight 'wB': -4.853887
+Testing on moat test-data
+test((0, 0, 0)) returned: 0.000472855723931 => 0.0 [correct]
+test((1, 0, 0)) returned: 0.00100368339516 => 0.0 [correct]
+test((2, 0, 0)) returned: 0.00100017793602 => 0.0 [correct]
+test((3, 0, 0)) returned: 0.000999886964171 => 0.0 [correct]
+test((4, 0, 0)) returned: 0.000999863201052 => 0.0 [correct]
+test((1, 1, 0)) returned: 0.011014144812 => 0.0 [correct]
+test((4, 1, 0)) returned: 0.00100224906777 => 0.0 [correct]
+test((1, 2, 0)) returned: 0.00152055254681 => 0.0 [correct]
+test((3, 3, 1)) returned: 0.307012563371 => 0.0 [wrong]
+test((4, 2, 0)) returned: 0.00645102928868 => 0.0 [correct]
+test((1, 4, 0)) returned: 0.0013914910904 => 0.0 [correct]
+test((4, 4, 0)) returned: 0.307857346301 => 0.0 [correct]
+test((0, 4, 0)) returned: 0.00139149107323 => 0.0 [correct]
+test((1, 4, 0)) returned: 0.0013914910904 => 0.0 [correct]
+test((2, 4, 0)) returned: 0.00139186166452 => 0.0 [correct]
+test((3, 4, 0)) returned: 0.0145891843856 => 0.0 [correct]
+test((4, 4, 0)) returned: 0.307857346301 => 0.0 [correct]
+Accuracy: 0.941176
+----------------------------------------
+Training on letter-l data
+iter 1000: mean-abs-performance = 0.000700
+iter 2000: mean-abs-performance = 0.000186
+iter 3000: mean-abs-performance = 0.000103
+iter 3065: training complete.
+mean-abs-performance threshold 0.0001 reached (0.000100)
+Trained weights:
+Weight 'w1A': -10.700503
+Weight 'w2A': 3.177436
+Weight 'wA': 3.987578
+Weight 'wAC': 10.594286
+Weight 'wBC': -11.337702
+Weight 'wC': -5.584129
+Weight 'w1B': -2.919042
+Weight 'w2B': 11.912896
+Weight 'wB': -1.492842
+Testing on letter-l test-data
+test((0, 0, 0)) returned: 0.0298789806414 => 0.0 [correct]
+test((1, 0, 1)) returned: 0.967331142735 => 1.0 [correct]
+test((2, 0, 1)) returned: 0.99567487779 => 1.0 [correct]
+test((3, 0, 1)) returned: 0.996227348503 => 1.0 [correct]
+test((4, 0, 1)) returned: 0.996255445025 => 1.0 [correct]
+test((1, 1, 0)) returned: 0.00316273456216 => 0.0 [correct]
+test((2, 1, 0)) returned: 0.00317991576757 => 0.0 [correct]
+test((3, 1, 0)) returned: 0.00351902762656 => 0.0 [correct]
+test((4, 1, 0)) returned: 0.0171977410099 => 0.0 [correct]
+test((0, 2, 1)) returned: 0.980787091248 => 1.0 [correct]
+test((1, 2, 0)) returned: 0.0031694370702 => 0.0 [correct]
+test((0, 3, 1)) returned: 0.991833149473 => 1.0 [correct]
+test((1, 3, 0)) returned: 0.00335870193462 => 0.0 [correct]
+test((0, 4, 1)) returned: 0.992147087713 => 1.0 [correct]
+test((1, 4, 0)) returned: 0.0113580433725 => 0.0 [correct]
+Accuracy: 1.000000
